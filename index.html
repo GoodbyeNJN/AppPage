@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" class="noScroll">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>app示例页面</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="stateBar">
+            <div class="wrap">
+                <div class="left">
+                    <div id="signal"></div>
+                    <span id="carrier">中国移动</span>
+                    <div id="wifi"></div>
+                </div>
+                <div class="right">
+                    <div id="battery"></div>
+                </div>
+            </div>
+        </div>
+        <div id="titleBar">
+            <div class="todayDate"><span>2019-02-12</span></div>
+            <div class="todayBtn"><p id="todayBtn">今天</p></div>
+        </div>
+        <div id="main">
+            <div id="calendar">
+                <div class="weekday">
+                    <ul>
+                        <li>日</li>
+                        <li>一</li>
+                        <li>二</li>
+                        <li>三</li>
+                        <li>四</li>
+                        <li>五</li>
+                        <li>六</li>
+                    </ul>
+                </div>
+                <div class="date">
+                    <div class="weekView">
+                        <ul class="firstWeek">
+                            <li class="sun">10<span class="circle"></span><span class="dot"></span></li>
+                            <li class="mon">11<span class="circle"></span><span class="dot"></span></li>
+                            <li class="tue today isSelected hasSchedule">12<span class="circle"></span><span class="dot"></span></li>
+                            <li class="wed">13<span class="circle"></span><span class="dot"></span></li>
+                            <li class="thu hasSchedule">14<span class="circle"></span><span class="dot"></span></li>
+                            <li class="fri">15<span class="circle"></span><span class="dot"></span></li>
+                            <li class="sat">16<span class="circle"></span><span class="dot"></span></li>
+                        </ul>
+                    </div>
+                    <div class="monthView">
+                        <ul class="firstWeek">
+                            <li class="sun"><span class="circle"></span><span class="dot"></span></li>
+                            <li class="mon"><span class="circle"></span><span class="dot"></span></li>
+                            <li class="tue"><span class="circle"></span><span class="dot"></span></li>
+                            <li class="wed"><span class="circle"></span><span class="dot"></span></li>
+                            <li class="thu"><span class="circle"></span><span class="dot"></span></li>
+                            <li class="fri">1<span class="circle"></span><span class="dot"></span></li>
+                            <li class="sat">2<span class="circle"></span><span class="dot"></span></li>
+                        </ul>
+                        <ul class="secondWeek">
+                            <li class="sun">3<span class="circle"></span><span class="dot"></span></li>
+                            <li class="mon hasSchedule">4<span class="circle"></span><span class="dot"></span></li>
+                            <li class="tue">5<span class="circle"></span><span class="dot"></span></li>
+                            <li class="wed">6<span class="circle"></span><span class="dot"></span></li>
+                            <li class="thu">7<span class="circle"></span><span class="dot"></span></li>
+                            <li class="fri">8<span class="circle"></span><span class="dot"></span></li>
+                            <li class="sat">9<span class="circle"></span><span class="dot"></span></li>
+                        </ul>
+                        <ul class="thirdWeek">
+                            <li class="sun">10<span class="circle"></span><span class="dot"></span></li>
+                            <li class="mon">11<span class="circle"></span><span class="dot"></span></li>
+                            <li class="tue today isSelected hasSchedule">12<span class="circle"></span><span class="dot"></span></li>
+                            <li class="wed">13<span class="circle"></span><span class="dot"></span></li>
+                            <li class="thu hasSchedule">14<span class="circle"></span><span class="dot"></span></li>
+                            <li class="fri">15<span class="circle"></span><span class="dot"></span></li>
+                            <li class="sat">16<span class="circle"></span><span class="dot"></span></li>
+                        </ul>
+                        <ul class="fourthWeek">
+                            <li class="sun">17<span class="circle"></span><span class="dot"></span></li>
+                            <li class="mon hasSchedule">18<span class="circle"></span><span class="dot"></span></li>
+                            <li class="tue">19<span class="circle"></span><span class="dot"></span></li>
+                            <li class="wed">20<span class="circle"></span><span class="dot"></span></li>
+                            <li class="thu">21<span class="circle"></span><span class="dot"></span></li>
+                            <li class="fri">22<span class="circle"></span><span class="dot"></span></li>
+                            <li class="sat">23<span class="circle"></span><span class="dot"></span></li>
+                        </ul>
+                        <ul class="fifthWeek">
+                            <li class="sun">24<span class="circle"></span><span class="dot"></span></li>
+                            <li class="mon">25<span class="circle"></span><span class="dot"></span></li>
+                            <li class="tue">26<span class="circle"></span><span class="dot"></span></li>
+                            <li class="wed">27<span class="circle"></span><span class="dot"></span></li>
+                            <li class="thu">28<span class="circle"></span><span class="dot"></span></li>
+                            <li class="fri"><span class="circle"></span><span class="dot"></span></li>
+                            <li class="sat"><span class="circle"></span><span class="dot"></span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="expand">
+                    <div id="expandBtn" class="toExpand"></div>
+                </div>
+            </div>
+            <div id="tabBar">
+                <div class="wrap">
+                    <ul>
+                        <li class="curTab">
+                            <p id="tipsTab">已设置的提醒</p>
+                            <span></span>
+                        </li>
+                        <li>
+                            <p id="creTimeTab">创建时间</p>
+                            <span></span>
+                        </li>
+                        <li>
+                            <p id="lstTimeTab">最后发言时间</p>
+                            <span></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="contentList">
+                <div class="wrap">
+                    <ul class="contentList">
+                        <li>
+                            <div class="content">
+                                <div class="left">
+                                    <h1>227市场</h1>
+                                    <p class="detail">定价依据和客户判定</p>
+                                    <p class="myCharacter">我的角色：<span>经办人</span></p>
+                                </div>
+                                <div class="right">
+                                    <p class="updateTime">16:24</p>
+                                    <span class="more"></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="content">
+                                <div class="left">
+                                    <h1>新软件</h1>
+                                    <p class="detail">成立体验小组，测试软件</p>
+                                    <p class="myCharacter assigned">我的角色：<span>交办人</span></p>
+                                </div>
+                                <div class="right">
+                                    <p class="updateTime">13:34</p>
+                                    <span class="more"></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="content">
+                                <div class="left">
+                                    <h1>2-3-6手提项目</h1>
+                                    <p class="detail">236手提灭火器项目，10月需要提交给需求方</p>
+                                    <p class="myCharacter assigned">我的角色：<span>交办人</span></p>
+                                </div>
+                                <div class="right">
+                                    <p class="updateTime">9:24</p>
+                                    <span class="more"></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="content">
+                                <div class="left">
+                                    <h1>消防资格考试</h1>
+                                    <p class="detail">考试纲要 考试时间 考试地点</p>
+                                    <p class="myCharacter">我的角色：<span>经办人</span></p>
+                                </div>
+                                <div class="right">
+                                    <p class="updateTime">昨天</p>
+                                    <span class="more"></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="content">
+                                <div class="left">
+                                    <h1>总裁办招新</h1>
+                                    <p class="detail">招新人</p>
+                                    <p class="myCharacter">我的角色：<span>经办人</span></p>
+                                </div>
+                                <div class="right">
+                                    <p class="updateTime">10-28</p>
+                                    <span class="more"></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="content">
+                                <div class="left">
+                                    <h1>系统维护</h1>
+                                    <p class="detail">例行系统维护</p>
+                                    <p class="myCharacter">我的角色：<span>经办人</span></p>
+                                </div>
+                                <div class="right">
+                                    <p class="updateTime">10-23</p>
+                                    <span class="more"></span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="noSchedule">当天没有日程安排</p>
+                </div>
+            </div>
+            <div id="navBar">
+                <div class="wrap">
+                    <ul>
+                        <li>
+                            <div class="work">
+                                <div class="icon"></div>
+                                <div class="name">
+                                    <p>工作</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="character">
+                                <div class="icon"></div>
+                                <div class="name">
+                                    <p>角色</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="matters">
+                                <div class="icon"></div>
+                                <div class="name">
+                                    <p>事项圈</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="colleague">
+                                <div class="icon"></div>
+                                <div class="name">
+                                    <p>同事</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="curNavTab">
+                            <div class="calendar">
+                                <div class="icon"></div>
+                                <div class="name">
+                                    <p>日历</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
